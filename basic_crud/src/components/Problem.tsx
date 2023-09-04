@@ -1,8 +1,18 @@
-const Problem = ({problemData}) => {
+interface ProblemData {
+  id: number;
+  name: string;
+  url: string;
+}
+
+interface props {
+  problemData: Array<ProblemData>;
+}
+
+const Problem = (props: props) => {
   return (
     <div>
 
-      {problemData.map((problem) => {
+      {props.problemData.map((problem: ProblemData) => {
         return(
           <div className="problem" key={problem.id}>
             <p>name: {problem.name}</p>
