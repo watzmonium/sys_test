@@ -1,3 +1,5 @@
+import './Problem.css'
+
 interface ProblemData {
   id: number;
   name: string;
